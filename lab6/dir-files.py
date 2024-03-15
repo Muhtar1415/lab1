@@ -12,7 +12,7 @@ path=r"C:\Users\user\Desktop\pp2"
 print(f"{path} exists: {os.access(path, os.F_OK)}")
 print(f"{path} is readable: {os.access(path, os.R_OK)}")
 print(f"{path} is writeable: {os.access(path, os.W_OK)}")
-print(f"{path} is executable: {os.access(path, os.X_OK)}")
+print(f"{path} is executable: {os.access(path, os.X_OK)}")x
 
 #task3
 import os
@@ -30,6 +30,7 @@ line=open("sometext.txt", "r")
 print(len(line.readlines()))
 line.close()
 
+
 #task5
 f = open("text5.txt", "w")
 li = input("Input a list of values separated by commas: ").split(", ")
@@ -40,11 +41,11 @@ f.close()
 from string import ascii_uppercase
 
 path = r"C:\Users\user\Desktop\pp2"
-if not os.access(new_path, os.F_OK):
-    os.makedirs(new_path)
+if not os.access(path, os.F_OK):
+    os.makedirs(path)
 
 for soz in ascii_uppercase:
-    f = open(f"{new_path}\\{soz}.txt", "w")
+    f = open(f"{path}\\{soz}.txt", "w")
     f.write(f"This is {soz}'s txt file")
     f.close()
 
