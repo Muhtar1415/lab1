@@ -21,7 +21,7 @@ secrect =ekikol.get_rect()
 secrect.center = (260,250)
 
 currenttime = datetime.datetime.now()
-secvalue = currenttime.second
+secvalue = currenttime.hour
 minvalue = currenttime.minute
 
 run = True
@@ -40,16 +40,15 @@ while run:
 
     screen.blit(genfirkol,ledfirrect)
 
-    genekikol = pygame.transform.rotate(ekikol, -1*((6*secvalue+180)%360))
+    genekikol = pygame.transform.rotate(ekikol, -1*((6*secvalue-130)%360))
     gensecrect = genekikol.get_rect()
     gensecrect.center = secrect.center
 
     screen.blit(genekikol, gensecrect)
 
     currenttime = datetime.datetime.now()
-    secvalue = currenttime.second
+    secvalue = currenttime.hour
     minvalue = currenttime.minute
 
     pygame.display.update()
     clock.tick(fps)
-

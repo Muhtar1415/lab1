@@ -4,12 +4,12 @@ pygame.init()
 window_size = (800, 600)
 screen = pygame.display.set_mode(window_size)
 pygame.display.set_caption("Draw circle")
-ball_color = pygame.Color('red')
+square_color = pygame.Color('blue')
 bg_color = pygame.Color('white')
 
-ball_pos = [400, 300]
 
-ball_radius = 25
+
+square_pos=[400,400]
 
 speed = 20
 
